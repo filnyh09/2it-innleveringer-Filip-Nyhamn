@@ -1,4 +1,4 @@
-alder = 15
+alder = 18
 
 if alder >= 18:
     print("Du er myndig")
