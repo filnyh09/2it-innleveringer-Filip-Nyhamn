@@ -1,0 +1,3 @@
+navn = "Ola"
+
+print(navn)
