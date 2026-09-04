@@ -1,5 +1,5 @@
-pris = 25
-antall = 3
+pris = 30
+antall = 4
 
 total = pris * antall
 
