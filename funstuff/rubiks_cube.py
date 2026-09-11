@@ -32,12 +32,30 @@ class cube:
                 ["🟧", "🟧", "🟧"], 
                 ["🟧", "🟧", "🟧"]
                 ]
+                ,
+            "Blank": [
+                ["⬛", "⬛", "⬛"], 
+                ["⬛", "⬛", "⬛"], 
+                ["⬛", "⬛", "⬛"]
+                ]
         }
-    def showFace(self, face):
-        for row in self.face[face]:
-            print("".join(row))
 
-bob = cube
+    def showFace(self, *faces):
+        for face in faces:
+            if face not in self.face:
+                if face not in self.face:
+                    print(f"Unknown face: {face}")
+                    return
+        for rows in zip(*(self.face[face] for face in faces)):
+            print("".join("".join(row) for row in rows))
 
-bob.showFace("Top")
+    def showCube(self):
+        self.showFace("Blank", "Top", "Blank")
+        self.showFace("Left", "Front", "Right")
+        self.showFace("Blank", "Bottom", "Blank")
+        self.showFace("Blank", "Back", "Blank")
 
+
+bob = cube()
+
+bob.showCube
