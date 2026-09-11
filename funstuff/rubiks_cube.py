@@ -55,7 +55,15 @@ class cube:
         self.showFace("Blank", "Bottom", "Blank")
         self.showFace("Blank", "Back", "Blank")
 
+    def getPoint(self, face, row, column):
+        return self.face[face][row][column]
+
+    def rotateCube(self, face):
+        temp = self.face
+        print(self.getPoint("Top", 1, 3))
+
 
 bob = cube()
 
-bob.showCube
+bob.rotateCube("Top")
+bob.showCube()
