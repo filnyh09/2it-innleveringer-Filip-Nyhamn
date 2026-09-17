@@ -61,6 +61,7 @@ class cube:
     def rotateCube(self, face):
         temp = self.face
         print(self.getPoint("Top", 1, 2))
+        print(temp[face])
 
 
 bob = cube()
