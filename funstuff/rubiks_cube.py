@@ -133,5 +133,7 @@ bob.showCube()
 while True:
     Command = input()
 
-    if Command.casefold().replace(" ", "") in ["exit", "close", "treminate", "leave", "resign", "discontinue", "eliminate", "stop", "cease", "end", "extinguish", "abolish", "annul"]:
+    if Command.casefold().replace(" ", "") in["exit", "close", "treminate", "leave", "resign", "discontinue", "eliminate", "stop", "cease", "end", "extinguish", "abolish", "annul", "shutdown"]:
         break
+
+
