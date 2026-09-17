@@ -14,3 +14,12 @@ def vis_astronaut(astronaut):
 vis_astronaut("Nora")
 vis_astronaut("Elias")
 vis_astronaut("Sara")
+
+
+def vis_maane(navn, forelderPlanet):
+    print(f"Måne: {navn}")
+    print(f"Planet: {forelderPlanet}")
+
+vis_maane("Europa", "Jupiter")
+vis_maane("Titan", "Saturn")
+vis_maane("Phobos", "Mars")
