@@ -13,3 +13,4 @@ def vis_astronaut(astronaut):
 
 vis_astronaut("Nora")
 vis_astronaut("Elias")
+vis_astronaut("Sara")
