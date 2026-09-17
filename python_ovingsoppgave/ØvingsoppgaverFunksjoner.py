@@ -23,3 +23,19 @@ def vis_maane(navn, forelderPlanet):
 vis_maane("Europa", "Jupiter")
 vis_maane("Titan", "Saturn")
 vis_maane("Phobos", "Mars")
+
+
+def beregn_reise(fart, tid):
+    avstand = fart * tid
+    return avstand
+
+avstand = beregn_reise(2000, 5)
+print(f"Romskipet har reist {avstand} km.")
+
+
+if avstand < 5000:
+    print("Kort reise")
+elif avstand < 20000:
+    print("Mellomlang reise")
+else:
+    print("Lang reise")
