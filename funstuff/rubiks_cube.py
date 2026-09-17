@@ -53,7 +53,11 @@ class cube:
         self.showFace("Blank", "Top", "Blank")
         self.showFace("Left", "Front", "Right")
         self.showFace("Blank", "Bottom", "Blank")
-        self.showFace("Blank", "Back", "Blank")
+        self.showBack()
+
+    def showBack(self):
+        for row in reversed(self.face["Back"]):
+            print("⬛⬛⬛" + "".join(reversed(row)) + "⬛⬛⬛")
 
     def rotateCube(self, face, clockwise=True):
         if face not in self.face or face == "Blank":
@@ -61,8 +65,8 @@ class cube:
             return
 
         directions = {
-            "Top": ((0, 1, 0), (1, 0, 0), (0, 0, -1)),
-            "Bottom": ((0, -1, 0), (1, 0, 0), (0, 0, 1)),
+            "Top": ((0, 1, 0), (1, 0, 0), (0, 0, 1)),
+            "Bottom": ((0, -1, 0), (1, 0, 0), (0, 0, -1)),
             "Left": ((-1, 0, 0), (0, 0, 1), (0, 1, 0)),
             "Right": ((1, 0, 0), (0, 0, -1), (0, 1, 0)),
             "Front": ((0, 0, 1), (1, 0, 0), (0, 1, 0)),
@@ -122,5 +126,11 @@ class cube:
 
 
 bob = cube()
+
+bob.showCube()
+
+bob.rotateCube("Top")
+
+print()
 
 bob.showCube()
