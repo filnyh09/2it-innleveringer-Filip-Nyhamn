@@ -55,16 +55,72 @@ class cube:
         self.showFace("Blank", "Bottom", "Blank")
         self.showFace("Blank", "Back", "Blank")
 
-    def getPoint(self, face, row, column):
-        return self.face[face][row][column]
+    def rotateCube(self, face, clockwise=True):
+        if face not in self.face or face == "Blank":
+            print(f"Unknown turn face: {face}")
+            return
 
-    def rotateCube(self, face):
-        temp = self.face
-        print(self.getPoint("Top", 1, 2))
-        print(temp[face])
+        directions = {
+            "Top": ((0, 1, 0), (1, 0, 0), (0, 0, -1)),
+            "Bottom": ((0, -1, 0), (1, 0, 0), (0, 0, 1)),
+            "Left": ((-1, 0, 0), (0, 0, 1), (0, 1, 0)),
+            "Right": ((1, 0, 0), (0, 0, -1), (0, 1, 0)),
+            "Front": ((0, 0, 1), (1, 0, 0), (0, 1, 0)),
+            "Back": ((0, 0, -1), (-1, 0, 0), (0, 1, 0))
+        }
+        normals = {name: values[0] for name, values in directions.items()}
+        normal_to_face = {normal: name for name, normal in normals.items()}
+        axis, _, _ = directions[face]
+        turn = -1 if clockwise else 1
+        new_faces = {
+            name: [row[:] for row in grid]
+            for name, grid in self.face.items()
+        }
+
+        for source_face, grid in self.face.items():
+            if source_face == "Blank":
+                continue
+            source_normal, horizontal, vertical = directions[source_face]
+            for row in range(3):
+                for column in range(3):
+                    position = tuple(
+                        source_normal[index]
+                        + horizontal[index] * (column - 1)
+                        + vertical[index] * (row - 1)
+                        for index in range(3)
+                    )
+                    if sum(axis[index] * position[index] for index in range(3)) != 1:
+                        continue
+
+                    new_position = self.rotateVector(position, axis, turn)
+                    new_normal = self.rotateVector(source_normal, axis, turn)
+                    target_face = normal_to_face[new_normal]
+                    _, target_horizontal, target_vertical = directions[target_face]
+                    target_row = 1 + sum(
+                        new_position[index] * target_vertical[index]
+                        for index in range(3)
+                    )
+                    target_column = 1 + sum(
+                        new_position[index] * target_horizontal[index]
+                        for index in range(3)
+                    )
+                    new_faces[target_face][target_row][target_column] = grid[row][column]
+
+        self.face = new_faces
+
+    def rotateVector(self, vector, axis, direction):
+        cross_product = (
+            axis[1] * vector[2] - axis[2] * vector[1],
+            axis[2] * vector[0] - axis[0] * vector[2],
+            axis[0] * vector[1] - axis[1] * vector[0]
+        )
+        dot_product = sum(axis[index] * vector[index] for index in range(3))
+        return tuple(
+            direction * cross_product[index] + axis[index] * dot_product
+            for index in range(3)
+        )
 
 
 bob = cube()
 
-bob.rotateCube("Top")
 bob.showCube()
