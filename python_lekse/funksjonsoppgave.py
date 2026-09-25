@@ -13,6 +13,14 @@ def signalTidEstimate(ping):
     else:
         print("Stor signalforsinkelse")
 
+def Meteorvarsel(diameter, avstandTilJorda):
+    if diameter < 67 or avstandTilJorda < 1000:
+        return "Lav risiko"
+    elif diameter < 
+
+
+
+
 
 satellittmelding("MESSENGER", "Merkurius")
 satellittmelding("Venus Express", "Afrodite")
