@@ -14,9 +14,12 @@ def signalTidEstimate(ping):
         print("Stor signalforsinkelse")
 
 def Meteorvarsel(diameter, avstandTilJorda):
-    if diameter < 67 or avstandTilJorda < 1000:
+    if diameter < 67 or avstandTilJorda > 1000:
         return "Lav risiko"
-    elif diameter < 
+    elif diameter < 670 or avstandTilJorda > 100:
+        return "Middels risiko"
+    else:
+        return "Høy risiko"
 
 
 
@@ -34,3 +37,7 @@ signalTidEstimate(satellittping)
 satellittping = pingSatellitt(32785248125021303121352062106)
 print(f"signale bruker {satellittping} sekunder for å nå målet.")
 signalTidEstimate(satellittping)
+
+print(Meteorvarsel(39593, 12040))
+print(Meteorvarsel(678, 180))
+print(Meteorvarsel(39593, 10))
