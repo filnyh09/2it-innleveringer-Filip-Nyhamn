@@ -11,4 +11,4 @@ planeter = [
     "Neptun"
     ]
 
-print(f"Dagens romreise går til {random.choice(planeter)}.\n")
+print(f"Dagens romreise går til {random.choice(planeter)}.\n")''
