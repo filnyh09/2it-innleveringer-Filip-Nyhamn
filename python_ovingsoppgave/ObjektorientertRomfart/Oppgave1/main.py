@@ -16,4 +16,12 @@ skip1 = romfartooy("Martin", 6, 27)
 skip2 = romfartooy("Bannan", 8, 2)
 skip3 = romfartooy("JanOlav", 5463, 67)
 
+print(skip2.presenter())
+
 print(skip1.presenter())
+
+skip2.ookeHastigheten()
+
+print(skip3.presenter())
+
+print(skip2.presenter())
