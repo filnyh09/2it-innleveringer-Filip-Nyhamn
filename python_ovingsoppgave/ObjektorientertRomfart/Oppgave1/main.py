@@ -4,3 +4,5 @@ class romfartooy:
         self.hastighet = hastighet
         self.drivstoffmengde = drivstoffmengde
 
+    def presenter(self):
+        return f"navn: {self.navn} \n hastighet: {self.hastighet} \n drivstoffmengde: {self.drivstoffmengde}"
