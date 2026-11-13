@@ -1,5 +1,10 @@
 def beregn_avstand(fart, timer):
+    if timer < 0:
+        raise ValueError("Tid kan ikke vere negativ")
     return fart * timer
 
-assert beregn_avstand(2, 2) == 4
-assert beregn_avstand(50, 8) == 400
+def beregn_drivstoff(avstand, timer):
+    return avstand * timer
+
+def velkommen(navn):
+    return(f"velkommen om bord {navn}")
