@@ -6,3 +6,8 @@ class romfartooy:
 
     def presenter(self):
         return f"navn: {self.navn} \n hastighet: {self.hastighet} \n drivstoffmengde: {self.drivstoffmengde}"
+
+    def ookeHastigheten(self):
+        if (self.drivstoffmengde - 1) >= 0:
+            self.hastighet += 1
+            self.drivstoffmengde -= 1
