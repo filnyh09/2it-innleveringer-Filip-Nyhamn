@@ -57,3 +57,7 @@ bigboom = rommissil("bigboom", 9999, 45, 3)
 print(ssromfartooy.presenter())
 print(romlevrandoor.presenter())
 print(bigboom.presenter())
+
+print(f"pasasjerer før landing: {ssromfartooy.presenter}")
+ssromfartooy.landing(5, 7)
+print(f"pasasjerer etter landing: {ssromfartooy.presenter}")
