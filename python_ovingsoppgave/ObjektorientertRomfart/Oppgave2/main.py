@@ -28,3 +28,8 @@ class rompasasjerskip(romfartooy):
         self.oksygen = oksygen
         self.pasasjerer = pasasjerer
 
+class rommissil(romfartooy):
+    def __init__(self, navn, hastighet, drivstoffmengde, mengdedinamit):
+        super().__init__(navn, hastighet, drivstoffmengde)
+
+        self.mengdedinamit = mengdedinamit
