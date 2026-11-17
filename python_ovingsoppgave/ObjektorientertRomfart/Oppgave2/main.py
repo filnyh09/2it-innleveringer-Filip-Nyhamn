@@ -16,10 +16,16 @@ class romfartooy:
 # -------------------------------------
 
 class romkargoskip(romfartooy):
-    def __init__(self, navn, hastighet, drivstoffmengde, lagerplass):
+    def __init__(self, navn, hastighet, drivstoffmengde, lager):
         super().__init__(navn, hastighet, drivstoffmengde)
 
-        self.lagerplass = lagerplass
+        self.lager = lager
+
+    def last(self, mengde):
+        self.lager += mengde
+
+    def lever(self):
+        self.lager = 0
 
 class rompasasjerskip(romfartooy):
     def __init__(self, navn, hastighet, drivstoffmengde, oksygen, pasasjerer):
@@ -27,6 +33,11 @@ class rompasasjerskip(romfartooy):
 
         self.oksygen = oksygen
         self.pasasjerer = pasasjerer
+
+    def landing(self, pasasjererpå, pasasjererav):
+        self.oksygen = 100
+        self.drivstoffmengde = 5000
+        self.pasasjerer += pasasjererpå - pasasjererav
 
 class rommissil(romfartooy):
     def __init__(self, navn, hastighet, drivstoffmengde, mengdedinamit):
