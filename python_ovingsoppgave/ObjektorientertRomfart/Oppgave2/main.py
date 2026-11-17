@@ -58,6 +58,6 @@ print(ssromfartooy.presenter())
 print(romlevrandoor.presenter())
 print(bigboom.presenter())
 
-print(f"pasasjerer før landing: {ssromfartooy.presenter}")
+print(f"pasasjerer før landing: {ssromfartooy.pasasjerer}")
 ssromfartooy.landing(5, 7)
-print(f"pasasjerer etter landing: {ssromfartooy.presenter}")
+print(f"pasasjerer etter landing: {ssromfartooy.pasasjerer}\n")
