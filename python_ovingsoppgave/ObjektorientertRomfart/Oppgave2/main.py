@@ -69,3 +69,6 @@ romlevrandoor.last(679)
 print(f"Kargo etter påfyll: {romlevrandoor.lager}")
 romlevrandoor.lever()
 print(f"Kargo etter levering: {romlevrandoor.lager}\n")
+
+
+print(bigboom.exploder())
