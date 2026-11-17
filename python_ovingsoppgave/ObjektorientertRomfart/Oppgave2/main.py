@@ -33,3 +33,7 @@ class rommissil(romfartooy):
         super().__init__(navn, hastighet, drivstoffmengde)
 
         self.mengdedinamit = mengdedinamit
+
+    def exploder(self):
+        return f"booom * {self.mengdedinamit}"
+
