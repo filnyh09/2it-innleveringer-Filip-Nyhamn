@@ -16,3 +16,7 @@ class romfartooy:
 # -------------------------------------
 
 class romkargoskip(romfartooy):
+    def __init__(self, navn, hastighet, drivstoffmengde, lagerplass):
+        super().__init__(navn, hastighet, drivstoffmengde)
+
+        self.lagerplass = lagerplass
