@@ -48,3 +48,9 @@ class rommissil(romfartooy):
     def exploder(self):
         return f"booom * {self.mengdedinamit}"
 
+ssromfartooy = rompasasjerskip("ssromfartøy", 10, 50, 68, 12)
+
+romlevrandoor = romkargoskip("rompost", 269, 42, 67)
+
+bigboom = rommissil("bigboom", 9999, 45, 3)
+
