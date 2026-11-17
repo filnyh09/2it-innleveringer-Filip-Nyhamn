@@ -54,3 +54,6 @@ romlevrandoor = romkargoskip("rompost", 269, 42, 67)
 
 bigboom = rommissil("bigboom", 9999, 45, 3)
 
+print(ssromfartooy.presenter())
+print(romlevrandoor.presenter())
+print(bigboom.presenter())
