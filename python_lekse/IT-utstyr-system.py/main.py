@@ -46,3 +46,5 @@ leverUtstyr()
 
 
 visStatus()
+
+write()
