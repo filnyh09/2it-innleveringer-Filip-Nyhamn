@@ -25,12 +25,20 @@ def laanUt():
         print("!Du kan bare skrive nommer!")
         return
     person = str(input("hvem vil du låne det ut til: "))
-    utlaan[ting -1] = person
+    try:
+        utlaan[ting -1] = person
+    except IndexError:
+        print("!du kan bare velge utstyr som er i listen!")
+        return
 
 def leverUtstyr():
     visUtstyr()
-    ting = int(input("hvilke utstyr vil du levere tilbake: "))
-    utlaan[ting -1] = None
+    try:
+        ting = int(input("hvilke utstyr vil du levere tilbake: "))
+        utlaan[ting -1] = None
+    except IndexError:
+        print("!du kan bare velge utstyr som er i listen!")
+        return
 
 def write():
     data = {"utstyr": utstyr, "utlaan": utlaan}
