@@ -19,7 +19,11 @@ def visUtstyr():
 
 def laanUt():
     visUtstyr()
-    ting = int(input("hvilke utstyr vil du låne ut: "))
+    try:
+        ting = int(input("hvilke utstyr vil du låne ut: "))
+    except ValueError:
+        print("!Du kan bare skrive nommer!")
+        return
     person = str(input("hvem vil du låne det ut til: "))
     utlaan[ting -1] = person
 
