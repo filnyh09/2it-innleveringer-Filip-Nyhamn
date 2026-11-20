@@ -33,7 +33,6 @@ def write():
     with open("python_lekse\IT-utstyr-system\data.json", "w") as file:
         json.dump(data, file, indent=4)
 
-
 while True:
     command = input(">")
     flexcmd = command.strip().lower()
@@ -55,3 +54,6 @@ while True:
 
     if flexcmd == "lagre":
         write()
+
+    if flexcmd not in ["exit", "status", "+utstyr", "utstyr+", "lånut", "lever", "lagre"]:
+        print("Not a command:(fwae")
