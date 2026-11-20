@@ -34,16 +34,14 @@ def write():
         json.dump(data, file, indent=4)
 
 
-legTilUtstyr()
-legTilUtstyr()
-legTilUtstyr()
+while True:
+    command = input(">")
 
-laanUt()
-laanUt()
+    if command.strip().lower() == "exit":
+        break
 
-leverUtstyr()
+    if command.strip().lower() == "status":
+        visStatus()
 
-
-visStatus()
-
-write()
+    if command.strip().lower() == "+utstyr" or "+utstyr":
+        
