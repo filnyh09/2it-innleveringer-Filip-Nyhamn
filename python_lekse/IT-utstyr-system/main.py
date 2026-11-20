@@ -10,7 +10,7 @@ def visStatus():
             print(f"status: {utlaan[listenom]}")
 
 def legTilUtstyr():
-    utstyr.append(input("Nytt utstyr: "))
+    utstyr.append(str(input("Nytt utstyr: ")))
     utlaan.append(None)
 
 def visUtstyr():
@@ -36,12 +36,22 @@ def write():
 
 while True:
     command = input(">")
+    flexcmd = command.strip().lower()
 
-    if command.strip().lower() == "exit":
+    if flexcmd == "exit":
         break
 
-    if command.strip().lower() == "status":
+    if flexcmd == "status":
         visStatus()
 
-    if command.strip().lower() == "+utstyr" or "utstyr+":
+    if flexcmd == "+utstyr" or flexcmd == "utstyr+":
         legTilUtstyr()
+
+    if flexcmd == "lånut":
+        laanUt()
+
+    if flexcmd == "lever":
+        leverUtstyr()
+
+    if flexcmd == "lagre":
+        write()
