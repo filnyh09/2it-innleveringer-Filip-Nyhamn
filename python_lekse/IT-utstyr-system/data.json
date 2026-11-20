@@ -1,14 +1,10 @@
 {
     "utstyr": [
         "mac",
-        "pc",
-        "pc",
-        "server"
+        "pc"
     ],
     "utlaan": [
-        "Jan Olav",
         null,
-        "kasper",
-        null
+        "kasper"
     ]
 }
