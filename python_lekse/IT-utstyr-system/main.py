@@ -30,9 +30,8 @@ def leverUtstyr():
 
 def write():
     data = {"utstyr": utstyr, "utlaan": utlaan}
-    with open("data.json", "w") as file:
+    with open("python_lekse\IT-utstyr-system\data.json", "w") as file:
         json.dump(data, file, indent=4)
-
 
 
 legTilUtstyr()
