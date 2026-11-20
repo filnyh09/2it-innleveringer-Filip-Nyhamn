@@ -1,3 +1,7 @@
-import python_lekse\IT-utstyr-system.py\bibliotek.py
+utstyr = []
+
+def legTilUtstyr(utstyrNavn):
+    utstyr.append(utstyrNavn)
+
 
 legTilUtstyr(input("Nytt utstyr:"))
