@@ -43,5 +43,5 @@ while True:
     if command.strip().lower() == "status":
         visStatus()
 
-    if command.strip().lower() == "+utstyr" or "+utstyr":
-        
+    if command.strip().lower() == "+utstyr" or "utstyr+":
+        legTilUtstyr()
