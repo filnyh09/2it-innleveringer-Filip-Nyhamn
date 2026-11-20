@@ -56,4 +56,4 @@ while True:
         write()
 
     if flexcmd not in ["exit", "status", "+utstyr", "utstyr+", "lånut", "lever", "lagre"]:
-        print("Not a command:(")
+        print("Not a command :(")
