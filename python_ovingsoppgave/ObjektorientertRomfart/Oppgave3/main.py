@@ -5,9 +5,26 @@ class enhet:
         self.navn = navn
         self.status = status
 
+
 class SveiseRobot(enhet):
     def __init__(self, navn, status):
         super().__init__(navn, status)
 
     def utfoorOppdrag():
         return "Reparerer skader på romstasjonen."
+
+class RengjøringsEnhet(enhet):
+    def __init__(self, navn, status):
+        super().__init__(navn, status)
+
+    def utfoorOppdrag():
+        return "Tømmer luftfilter."
+
+class Datamaskin(enhet):
+    def __init__(self, navn, status):
+        super().__init__(navn, status)
+
+    def utfoorOppdrag():
+        return "Behandler teleskopdata."
+
+
