@@ -9,4 +9,4 @@ from main2 import romkargoskip, rompasasjerskip, rommissil, romfartooy
     (rommissil),
 ])
 def test_atributer_blir_arvet(klasse):
-    assert hasattr(klasse, "presenter")
+    assert hasattr(klasse, "presenter") and hasattr(klasse, "ookeHastigheten")
