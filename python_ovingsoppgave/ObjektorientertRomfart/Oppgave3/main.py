@@ -44,3 +44,7 @@ tenker = Datamaskin("melvin", True)
 grubler = Datamaskin("Hans", False)
 
 enhetsliste = [robin, bob, martin, tenker, grubler]
+
+
+for enheter in enhetsliste:
+    print(enheter.utfoorOppdrag())
