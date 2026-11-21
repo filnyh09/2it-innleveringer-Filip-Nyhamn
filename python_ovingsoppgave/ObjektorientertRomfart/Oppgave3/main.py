@@ -11,7 +11,7 @@ class SveiseRobot(enhet):
         super().__init__(navn, status)
 
     def utfoorOppdrag(self):
-        if self.status
+        if self.status:
             return "Reparerer skader på romstasjonen."
         else:
             return "Må vere aktive for å utføre oppdrag"
@@ -21,14 +21,26 @@ class RengjøringsEnhet(enhet):
         super().__init__(navn, status)
 
     def utfoorOppdrag(self):
-        return "Tømmer luftfilter."
+        if self.status:
+            return "Tømmer luftfilter."
+        else:
+            return "Må vere aktive for å utføre oppdrag"
 
 class Datamaskin(enhet):
     def __init__(self, navn, status):
         super().__init__(navn, status)
 
     def utfoorOppdrag(self):
-        return "Behandler teleskopdata."
+        if self.status:
+            return "Behandler teleskopdata."
+        else:
+            return "Må vere aktive for å utføre oppdrag"
 
 
 robin = SveiseRobot("Robin", True)
+bob = RengjøringsEnhet("Bob", True)
+martin = RengjøringsEnhet("Martin", True)
+tenker = Datamaskin("melvin", True)
+grubler = Datamaskin("Hans", False)
+
+enhetsliste = [robin, bob, martin, tenker, grubler]
