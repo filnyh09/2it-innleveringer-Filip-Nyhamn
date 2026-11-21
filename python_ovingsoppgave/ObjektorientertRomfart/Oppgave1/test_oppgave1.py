@@ -3,10 +3,15 @@
 import pytest
 from main1 import romfartooy
 
-def test_romfartooy_ooker_hastighet_og_konsumerer_drivstoff():
-    testfartooy = romfartooy("test", 0, 10)
+@pytest.mark.parametrize("starthastighet, startdrivstoff, forventethastighet, forventetdrivstoff", [
+    (5, 4, 6, 3),
+    (7, 1, 8, 0),
+    (19, 68, 20, 67),
+])
+def test_romfartooy_ooker_hastighet_og_konsumerer_drivstoff(starthastighet, startdrivstoff, forventethastighet, forventetdrivstoff):
+    testfartooy = romfartooy("test", starthastighet, startdrivstoff)
     testfartooy.ookeHastigheten()
-    assert testfartooy.drivstoffmengde == 9 and testfartooy.hastighet == 1
+    assert testfartooy.drivstoffmengde == forventetdrivstoff and testfartooy.hastighet == forventethastighet
 
 def test_romfartooy_bruker_ikke_meir_drivstoff_en_den_har_og_ooker_dermed_ikke_hastighet():
     testfartooy = romfartooy("test", 10, 0)
