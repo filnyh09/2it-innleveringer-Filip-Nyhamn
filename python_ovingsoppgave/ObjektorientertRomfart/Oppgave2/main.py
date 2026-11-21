@@ -1,3 +1,5 @@
+# jeg har ikke brukt ai til å kode noe i dete skripte
+
 # ------------------fra opgave 1-------
 class romfartooy:
     def __init__(self, navn, hastighet, drivstoffmengde):
