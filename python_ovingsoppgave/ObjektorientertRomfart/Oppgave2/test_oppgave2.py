@@ -56,6 +56,7 @@ def test_landing_resulterer_med_rett_mengde_passasjerer(startpasasjer, pasasjere
     testShip.landing(pasasjererpå, pasasjererav)
     assert testShip.pasasjerer == forventetpasasjerer
 
+
 @pytest.mark.parametrize("mengdeDinamit, forventetResultat", [
     (1, "booom * 1"),
     (5, "booom * 5"),
