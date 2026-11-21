@@ -1,7 +1,7 @@
 #jeg har brukt ai for å feilsøke
 
 import pytest
-from main import romkargoskip, rompasasjerskip, rommissil, romfartooy
+from main2 import romkargoskip, rompasasjerskip, rommissil, romfartooy
 
 @pytest.mark.parametrize("klasse", [
     (romkargoskip),
@@ -9,4 +9,4 @@ from main import romkargoskip, rompasasjerskip, rommissil, romfartooy
     (rommissil),
 ])
 def test_atributer_blir_arvet(klasse):
-    assert hasattr(klasse, klasse.presenter)
+    assert hasattr(klasse, "presenter")

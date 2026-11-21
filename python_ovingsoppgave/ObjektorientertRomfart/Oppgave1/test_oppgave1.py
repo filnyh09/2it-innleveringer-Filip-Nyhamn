@@ -1,7 +1,7 @@
 #jeg har brukt ai for å feilsøke eit import problem
 
 import pytest
-from main import romfartooy
+from main1 import romfartooy
 
 def test_romfartooy_ooker_hastighet_og_konsumerer_drivstoff():
     testfartooy = romfartooy("test", 0, 10)
