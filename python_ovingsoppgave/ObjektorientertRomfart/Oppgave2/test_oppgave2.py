@@ -46,3 +46,18 @@ def test_rompasasjerskip_oksygenivaa_blir_hundre_prosent_når_den_lander(oksygen
     assert testShip.oksygen == 100
 
 
+@pytest.mark.parametrize("startpasasjer, pasasjererpå, pasasjererav, forventetpasasjerer", [
+    (6, 59, 3, 62),
+    (56, 12, 45, 23),
+    (9834, 673, 7092, 3415),
+])
+def test_landing_resulterer_med_rett_mengde_passasjerer(startpasasjer, pasasjererpå, pasasjererav, forventetpasasjerer):
+    testShip = rompasasjerskip("test", 0, 0, 100, startpasasjer)
+    testShip.landing(pasasjererpå, pasasjererav)
+    assert testShip.pasasjerer == forventetpasasjerer
+
+@pytest.mark.parametrize("mengdeDinamit, forventetResultat", [
+    (1, "booom * 1"),
+    (5, "booom * 5"),
+    (9834, "booom * 9834"),
+])
