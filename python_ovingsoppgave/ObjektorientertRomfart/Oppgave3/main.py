@@ -8,3 +8,6 @@ class enhet:
 class SveiseRobot(enhet):
     def __init__(self, navn, status):
         super().__init__(navn, status)
+
+    def utfoorOppdrag():
+        return "Reparerer skader på romstasjonen."
