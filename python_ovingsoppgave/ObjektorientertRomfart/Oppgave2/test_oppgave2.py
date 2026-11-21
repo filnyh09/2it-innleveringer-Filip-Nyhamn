@@ -61,3 +61,6 @@ def test_landing_resulterer_med_rett_mengde_passasjerer(startpasasjer, pasasjere
     (5, "booom * 5"),
     (9834, "booom * 9834"),
 ])
+def test_rommissil_exploderer_gir_rigtig_resultat(mengdeDinamit, forventetResultat):
+    testShip = rommissil("test", 0, 0, mengdeDinamit)
+    assert testShip.exploder() == forventetResultat
