@@ -1,7 +1,7 @@
 #jeg har brukt ai for å feilsøke
 
 import pytest
-from main2 import romkargoskip, rompasasjerskip, rommissil, romfartooy
+from main2 import romkargoskip, rompasasjerskip, rommissil
 
 
 @pytest.mark.parametrize("klasse", [
