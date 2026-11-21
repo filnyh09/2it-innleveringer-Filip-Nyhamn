@@ -1,12 +1,12 @@
-#jeg har brukt ai for å feilsøke eit import problem
+#jeg har brukt ai for å feilsøke
 
 import pytest
-from main import romkargoskip, rompasasjerskip, rommissil
+from main import romkargoskip, rompasasjerskip, rommissil, romfartooy
 
 @pytest.mark.parametrize("klasse", [
     (romkargoskip),
     (rompasasjerskip),
     (rommissil),
 ])
-#def test_atributer_blir_arvet(klasse):
-#    assert hasattr(klasse, 'presenter()')
+def test_atributer_blir_arvet(klasse):
+    assert hasattr(klasse, klasse.presenter)
